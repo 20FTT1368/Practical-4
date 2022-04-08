@@ -1,8 +1,10 @@
 package todolist.controller;
 
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
+import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 
 public class TodoController {
@@ -13,7 +15,21 @@ public class TodoController {
 	@FXML
 	Label errorLabel;
 
-	public void add() {
+	public void add() throws Exception {
+		FXMLLoader fxmlLoader = new FXMLLoader(
+				getClass().getResource("/todolist/view/SingleTodo.fxml"));
+		HBox newTodo = fxmlLoader.load();
+
+		SingleTodoController singleTodoController = fxmlLoader.getController();
+		if(singleTodoController.addTodo(todoTextField.getText(), todolistVBox))
+		{
+			todolistVBox.getChildren().add(newTodo);
+			todoTextField.clear();
+
+		} else {
+
+		}
+
 
 	}
 }

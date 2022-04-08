@@ -8,20 +8,19 @@
 	<stylesheets>
  		<URL value="@App.css" />
  	</stylesheets>
- 	
  	 <Label text="Welcome to ToDoList App" styleClass="title"/>
-	 	<HBox>
-	 		<Label text="Username" />
-			 <TextField fx:id="usernameTextField" />
-	 	</HBox>
-		<HBox >
-		 	<Label text="Password" />
- 			<PasswordField fx:id="passwordTextField" />
-		</HBox>
+	 <HBox>
+	 	<Label text="Username" />
+		<TextField fx:id="usernameTextField" />
+	 </HBox>
+	<HBox >
+		<Label text="Password" />
+ 		<PasswordField fx:id="passwordTextField" />
+	</HBox>
 		<CheckBox text="Show Password" fx:id="showPasswordCheckBox"/>
-		<HBox>
-		 	<Button text="Login" onAction="#login" />
- 			<Button text="Register" onAction="#register" />
-		</HBox>
-	 <Label styleClass="title, warning" fx:id="errorLabel"/>
+	<HBox>
+		<Button text="Login" onAction="#login" />
+ 		<Button text="Register" onAction="#register" />
+	</HBox>
+	<Label styleClass="title, warning" fx:id="errorLabel"/>
 </VBox>
